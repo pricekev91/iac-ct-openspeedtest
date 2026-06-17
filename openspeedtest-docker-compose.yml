@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   openspeedtest:
-    image: openspeedtest/openspeedtest:latest
+    image: openspeedtest/latest:latest
     container_name: openspeedtest
     restart: unless-stopped
     networks:

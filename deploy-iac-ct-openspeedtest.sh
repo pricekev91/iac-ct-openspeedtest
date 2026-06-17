@@ -121,8 +121,8 @@ else
 fi
 
 # --- Pull image ---------------------------------------------------------------
-echo "[PULL] Pulling openspeedtest/openspeedtest:latest ..."
-ssh_cmd "docker pull openspeedtest/openspeedtest:latest"
+echo "[PULL] Pulling openspeedtest/latest:latest ..."
+ssh_cmd "docker pull openspeedtest/latest:latest"
 echo "[ OK ] Image pulled"
 
 # --- Deploy -------------------------------------------------------------------
