@@ -1,3 +1,2 @@
-version: '3.8'
-services:
-  # Add services for iac-ct-openspeedtest here
+# Placeholder — main config is openspeedtest-docker-compose.yml
+# This file is intentionally left empty to avoid accidental docker compose invocations.

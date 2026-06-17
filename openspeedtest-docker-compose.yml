@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  openspeedtest:
+    image: openspeedtest/openspeedtest:latest
+    container_name: openspeedtest
+    restart: unless-stopped
+    networks:
+      macvlan:
+        ipv4_address: 192.168.1.5
+    ports:
+      - "80:8080"
+networks:
+  macvlan:
+    external: true
