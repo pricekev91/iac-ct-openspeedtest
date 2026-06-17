@@ -58,7 +58,7 @@ Deploys [OpenSpeedTest](https://www.openspeedtest.com/) as a Docker container on
 - **MACVLAN parent:** `eth0` (on hlh-docker)
 - **Static IP:** `192.168.1.5/24`
 - **Gateway:** `192.168.1.1`
-- **Port:** `80` (container internal port 8080 → exposed as 80)
+- **Port:** `80` (HTTP via `CHANGE_CONTAINER_PORTS` environment variable)
 
 ## Future
 
