@@ -1,6 +1,0 @@
----
-- hosts: localhost
-  tasks:
-    - name: Deploy iac-ct-openspeedtest
-      debug:
-        msg: "Deploying iac-ct-openspeedtest"
