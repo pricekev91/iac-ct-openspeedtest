@@ -126,8 +126,13 @@ ssh_cmd "docker pull openspeedtest/latest:latest"
 echo "[ OK ] Image pulled"
 
 # --- Deploy -------------------------------------------------------------------
+# Copy compose file to remote host before running docker compose
+echo "[DEPLOY] Uploading compose config to $REMOTE ..."
+scp -o StrictHostKeyChecking=no "$COMPOSE_FILE" "${REMOTE}:/tmp/$COMPOSE_FILE"
+echo "[ OK ] Compose config uploaded"
+
 echo "[DEPLOY] Deploying with docker compose ..."
-ssh_cmd "docker compose -f $COMPOSE_FILE up -d"
+ssh_cmd "docker compose -f /tmp/$COMPOSE_FILE up -d"
 echo "[ OK ] Container deployed"
 
 # --- Verification -------------------------------------------------------------
